@@ -111,7 +111,10 @@ function placeTetromino() {
         }
     }
     if (nbPoints) {
-        levelUp("TETRIS", nbPoints).catch((e) => console.error(e));
+        WA.onInit().then(() => {
+            console.log("On init done");
+            levelUp("TETRIS", nbPoints).catch((e) => console.error(e));
+        });
     }
 
     tetromino = getNextTetromino();
