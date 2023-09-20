@@ -2,7 +2,9 @@
 
 // get a random integer between the range of [min,max]
 // @see https://stackoverflow.com/a/1527820/2124254
-import {levelUp} from "@workadventure/quests";
+import {levelUp, setQuestBaseUrl} from "@workadventure/quests";
+
+setQuestBaseUrl("https://admin.staging.workadventu.re/");
 
 function getRandomInt(min, max) {
     min = Math.ceil(min);
